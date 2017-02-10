@@ -13,7 +13,7 @@ R   U   E   R
 
 // Inputs
 $string = "BARRACUDANETWORKSISHIRING"; // String to work with            // 1
-$z = 3; // Number of rows                                                // 1
+$z 			= 3; // Number of rows                                                // 1
 
 // Variables to consider
 $s = strlen($string); // Length of the string                            // 1+1
