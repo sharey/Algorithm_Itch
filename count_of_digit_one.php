@@ -20,8 +20,9 @@ if($number >= 10) // All numbers before 10 occur at one time only
     $formula = $iteration + 1;
      
     // For 10 and less, we dont want modulus +1 added
-    if($number > 10)
+    if($number > 10) {
         $formula += $modulus + 1;
+    }
 }
 else 
 {
