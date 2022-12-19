@@ -2,9 +2,6 @@
 
 $debug = false; // DEBUG FLAG
 
-//echo "<pre>";print_r($_POST);
-//$string = "sracecarsabcdefgfedcb";
-
 $string = strtolower($_POST['string']);
 
 echo "<br>Given String -> ".$string."<br>";
@@ -26,7 +23,9 @@ if($string_length > 2) // LESS THAN OR EQUAL TO 2 IS NEVER A PALINDROME
 			$forward	= $pivot+$incre;
 			
 			if($debug)	echo "<hr>".$string[$backward]." -- ".$string[$forward];
-			if($string[$backward] == $string[$forward] && $forward < $string_length) // MATCH THE LETTER AND FORWARD SHOULDNT EXCEED LENGTH
+            
+            // MATCH THE LETTER AND FORWARD SHOULDNT EXCEED LENGTH
+			if($string[$backward] == $string[$forward] && $forward < $string_length) 
 			{
 				if($incre == 1)
 					$store 	= $string[$pivot];
@@ -56,7 +55,8 @@ if($longest_palindrome_length > 0)
 	
 	while ($longest_palindrome_length > 0)
 	{
-		$longest_palindrome .= $longest_palindrome_partial[$longest_palindrome_length]; // PRINT THE LONGEST PARTIAL PALINDROME BACKWARDS
+		// PRINT THE LONGEST PARTIAL PALINDROME BACKWARDS
+        $longest_palindrome .= $longest_palindrome_partial[$longest_palindrome_length]; 
 		
 		$longest_palindrome_length--;
 	}

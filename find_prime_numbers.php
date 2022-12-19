@@ -26,8 +26,9 @@ for($i=3; $i <= $given_number; $i++)
         }
     }
     
-    if(${"counter_".$i})
+    if(${"counter_".$i}) {
         $count += 1;
+    }
 }
 
 echo "Total Prime Numbers -> ".$count;
