@@ -12,7 +12,7 @@ class Queue
         $this->limit = $limit;
     }
     
-    function push($x)
+    public function push($x)
     {
         if(count($this->queue) < $this->limit)
             array_unshift($this->queue, $x); // Insert an element into queue
@@ -20,7 +20,7 @@ class Queue
             echo "Queue is Full";
     }
     
-    function pop()
+    public function pop()
     {
         if(count($this->queue) == 0)
             echo "Queue is Empty";
@@ -28,7 +28,7 @@ class Queue
             array_pop($this->queue); // Remove the top element from stack
     }
     
-    function dump()
+    public function dump()
     {
         echo "<pre>";print_r($this->queue);
     }
